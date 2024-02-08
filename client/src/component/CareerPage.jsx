@@ -12,54 +12,51 @@ import MessageBox from "./MessageBox";
 
 function CareerPage() {
   const [toggle, setToggle] = useState(false);
-  const [showMessageBox, setShowMessageBox] = useState(false);
-  const [showMessage, setShowMessage] = useState("");
-  const [messageClass, setMessageClass] = useState("");
-
-  function checkToggle() {
-    const checker = document.querySelector(".checker");
-    const sliderbtn = document.querySelector(".slider-button");
-
-    if (toggle) {
-      checker.classList.remove("active");
-      sliderbtn.innerHTML = "x";
-      setToggle(!toggle);
-    } else {
-      checker.classList.add("active");
-      sliderbtn.innerHTML = "&#10003;";
-      setToggle(!toggle);
-    }
-  }
-
   const [careerForm, setCareerForm] = useState({
     name: "",
     email: "",
     phone: "",
     vacancy: "",
     message: "",
-    file: "",
+    file: null,
   });
+  const [showMessageBox, setShowMessageBox] = useState(false);
+  const [showMessage, setShowMessage] = useState("");
+  const [messageClass, setMessageClass] = useState("");
 
-  const hideDivAfterDelay = () => {
-    setTimeout(() => {
-      setShowMessageBox(false);
-    }, 3000);
-
+  const checkToggle = () => {
+    setToggle(!toggle);
   };
 
   const careerInputHandler = (e) => {
     const { name, value } = e.target;
-    return setCareerForm({ ...careerForm, [name]: value });
+    setCareerForm({ ...careerForm, [name]: value });
+  };
+
+  const fileInputChangeHandler = (e) => {
+    const file = e.target.files[0];
+    setCareerForm({ ...careerForm, file });
   };
 
   const careerSubmitHandler = async (e) => {
     e.preventDefault();
-
+  
     try {
-      const response = await axios.post(
-        "http://localhost:4000/career",
-        careerForm
-      );
+      const formData = new FormData();
+      formData.append("name", careerForm.name);
+      formData.append("email", careerForm.email);
+      formData.append("phone", careerForm.phone);
+      formData.append("vacancy", careerForm.vacancy);
+      formData.append("message", careerForm.message);
+      formData.append("file", careerForm.file);
+  
+      console.log("Form Data:", Object.fromEntries(formData)); // Log the form data
+  
+      const response = await axios.post("http://localhost:4000/career", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
 
       if (response.status === 201) {
         setShowMessageBox(true);
@@ -71,17 +68,19 @@ function CareerPage() {
           phone: "",
           vacancy: "",
           message: "",
-          file: "",
+          file: null,
         });
-        hideDivAfterDelay();
-        // alert(response.data.message);
+        setTimeout(() => {
+          setShowMessageBox(false);
+        }, 3000);
       }
     } catch (error) {
       setShowMessageBox(true);
       setShowMessage(error.response.data.message);
       setMessageClass("failed");
-      hideDivAfterDelay();
-      // alert(error.response.data.message);
+      setTimeout(() => {
+        setShowMessageBox(false);
+      }, 3000);
     }
   };
 
@@ -203,7 +202,7 @@ function CareerPage() {
                 name="file"
                 placeholder="Upload CV/ Portfolio*"
                 id="file"
-                onChange={careerInputHandler}
+                onChange={fileInputChangeHandler} // Use fileInputChangeHandler for file input
               />
               <textarea
                 name="message"
@@ -234,6 +233,6 @@ function CareerPage() {
       <Footer></Footer>
     </React.Fragment>
   );
-}
+};
 
 export default CareerPage;
