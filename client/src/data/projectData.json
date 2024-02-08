@@ -1,0 +1,254 @@
+[
+  {
+    "id": 0,
+    "serviceName": "All",
+    "serviceData": [
+      {
+        "id": 1,
+        "projectName": "Branding: Shaping Identities, Crafting Legacies",
+        "projectDesc": "The Branding service is at the heart of what we do, and this is where we give our best to a brand-new life for your web. You would not want to miss our services on Website Design, Website redesign, UI/UX design and Newsletter Design.<br /> To make a brand personality that connects with your audience, we learn a lot about your story, values, and goals. We build lasting brand legacies through everything from logo design to brand planning.",
+        "projectImg": "../media/jpg/p1.jpg"
+      },
+      {
+        "id": 2,
+        "projectName": "Packaging: Art Beyond Protection",
+        "projectDesc": "Packaging is more than just keeping something safe; it's also about having an experience. The Packaging service we offer is both useful and beautiful. We design packages that keep your goods safe and make them Read More...",
+        "projectImg": "../media/jpg/p2.jpg"
+      },
+      {
+        "id": 3,
+        "projectName": "Social Media: Sparking Connections",
+        "projectDesc": "In the fast-paced world of digital presence, our Social Media Marketing service goes above and beyond what most people do. We deal with News Paper Advertisement, Radio advertisement, Theater advertisement, Read More...",
+        "projectImg": "../media/jpg/p3.jpg"
+      },
+      {
+        "id": 4,
+        "projectName": "Website Design and Development",
+        "projectDesc": "The digital landscape is our playground. For a client who wanted to change the way they looked online, we began the creative process of rebuilding. Their website went to a new level with a user-centered web design, interactive features, and an easy-to-use online trip. The numbers spoke volumes as the website got a 30% surge in online engagement, marked by a 20% rise in conversion rates and resounding positive user feedback.",
+        "projectImg": "../media/jpg/p4.jpg"
+      },
+      {
+        "id": 5,
+        "projectName": "Video Editing Design: Crafting Visual Narratives",
+        "projectDesc": "Our Video Editing Design service brings stories to life in this age of visual storytelling. Our video editors can tell your audience interesting stories through everything from promotional videos to interesting material for your websites. It's not just editing that we care about; it's also making visual experiences that last.",
+        "projectImg": "../media/jpg/p5.jpg"
+      },
+      {
+        "id": 6,
+        "projectName": "Outdoor Branding Mastery",
+        "projectDesc": "Experience the impact of our outdoor branding expertise. Elevate your brand with visually stunning designs that command attention in every open space. Explore our portfolio for a glimpse into the world where Read More...",
+        "projectImg": "../media/jpg/p6.jpg"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "serviceName": "Graphic Design",
+    "serviceData": [
+      {
+        "id": 1,
+        "projectName": "Branding: Legacies",
+        "projectDesc": "The Branding service is at the heart of what we do, and this is where we give our best to a brand-new life for your web. You would not want to miss our services on Website Design, Website redesign, UI/UX design and Newsletter Design.<br /> To make a brand personality that connects with your audience, we learn a lot about your story, values, and goals. We build lasting brand legacies through everything from logo design to brand planning.",
+        "projectImg": "../media/jpg/p1.jpg"
+      },
+      {
+        "id": 2,
+        "projectName": "Packaging: Art Beyond Protection",
+        "projectDesc": "Packaging is more than just keeping something safe; it's also about having an experience. The Packaging service we offer is both useful and beautiful. We design packages that keep your goods safe and make them Read More...",
+        "projectImg": "../media/jpg/p2.jpg"
+      },
+      {
+        "id": 3,
+        "projectName": "Social Media: Sparking Connections",
+        "projectDesc": "In the fast-paced world of digital presence, our Social Media Marketing service goes above and beyond what most people do. We deal with News Paper Advertisement, Radio advertisement, Theater advertisement, Read More...",
+        "projectImg": "../media/jpg/p3.jpg"
+      },
+      {
+        "id": 4,
+        "projectName": "Website Design and Development",
+        "projectDesc": "The digital landscape is our playground. For a client who wanted to change the way they looked online, we began the creative process of rebuilding. Their website went to a new level with a user-centered web design, interactive features, and an easy-to-use online trip. The numbers spoke volumes as the website got a 30% surge in online engagement, marked by a 20% rise in conversion rates and resounding positive user feedback.",
+        "projectImg": "../media/jpg/p4.jpg"
+      },
+      {
+        "id": 5,
+        "projectName": "Video Editing Design: Crafting Visual Narratives",
+        "projectDesc": "Our Video Editing Design service brings stories to life in this age of visual storytelling. Our video editors can tell your audience interesting stories through everything from promotional videos to interesting material for your websites. It's not just editing that we care about; it's also making visual experiences that last.",
+        "projectImg": "../media/jpg/p5.jpg"
+      },
+      {
+        "id": 6,
+        "projectName": "Outdoor Branding Mastery",
+        "projectDesc": "Experience the impact of our outdoor branding expertise. Elevate your brand with visually stunning designs that command attention in every open space. Explore our portfolio for a glimpse into the world where Read More...",
+        "projectImg": "../media/jpg/p6.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "serviceName": "Printing",
+    "serviceData": [
+      {
+        "id": 1,
+        "projectName": "Branding: Shaping Identities, Crafting Legacies",
+        "projectDesc": "The Branding service is at the heart of what we do, and this is where we give our best to a brand-new life for your web. You would not want to miss our services on Website Design, Website redesign, UI/UX design and Newsletter Design.<br /> To make a brand personality that connects with your audience, we learn a lot about your story, values, and goals. We build lasting brand legacies through everything from logo design to brand planning.",
+        "projectImg": "../media/jpg/p1.jpg"
+      },
+      {
+        "id": 2,
+        "projectName": "Packaging: Art Beyond Protection",
+        "projectDesc": "Packaging is more than just keeping something safe; it's also about having an experience. The Packaging service we offer is both useful and beautiful. We design packages that keep your goods safe and make them Read More...",
+        "projectImg": "../media/jpg/p2.jpg"
+      },
+      {
+        "id": 3,
+        "projectName": "Social Media: Sparking Connections",
+        "projectDesc": "In the fast-paced world of digital presence, our Social Media Marketing service goes above and beyond what most people do. We deal with News Paper Advertisement, Radio advertisement, Theater advertisement, Read More...",
+        "projectImg": "../media/jpg/p3.jpg"
+      },
+      {
+        "id": 4,
+        "projectName": "Website Design and Development",
+        "projectDesc": "The digital landscape is our playground. For a client who wanted to change the way they looked online, we began the creative process of rebuilding. Their website went to a new level with a user-centered web design, interactive features, and an easy-to-use online trip. The numbers spoke volumes as the website got a 30% surge in online engagement, marked by a 20% rise in conversion rates and resounding positive user feedback.",
+        "projectImg": "../media/jpg/p4.jpg"
+      },
+      {
+        "id": 5,
+        "projectName": "Video Editing Design: Crafting Visual Narratives",
+        "projectDesc": "Our Video Editing Design service brings stories to life in this age of visual storytelling. Our video editors can tell your audience interesting stories through everything from promotional videos to interesting material for your websites. It's not just editing that we care about; it's also making visual experiences that last.",
+        "projectImg": "../media/jpg/p5.jpg"
+      },
+      {
+        "id": 6,
+        "projectName": "Outdoor Branding Mastery",
+        "projectDesc": "Experience the impact of our outdoor branding expertise. Elevate your brand with visually stunning designs that command attention in every open space. Explore our portfolio for a glimpse into the world where Read More...",
+        "projectImg": "../media/jpg/p6.jpg"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "serviceName": "Marketing",
+    "serviceData": [
+      {
+        "id": 1,
+        "projectName": "Branding: Shaping Identities, Crafting Legacies",
+        "projectDesc": "The Branding service is at the heart of what we do, and this is where we give our best to a brand-new life for your web. You would not want to miss our services on Website Design, Website redesign, UI/UX design and Newsletter Design.<br /> To make a brand personality that connects with your audience, we learn a lot about your story, values, and goals. We build lasting brand legacies through everything from logo design to brand planning.",
+        "projectImg": "../media/jpg/p1.jpg"
+      },
+      {
+        "id": 2,
+        "projectName": "Packaging: Art Beyond Protection",
+        "projectDesc": "Packaging is more than just keeping something safe; it's also about having an experience. The Packaging service we offer is both useful and beautiful. We design packages that keep your goods safe and make them Read More...",
+        "projectImg": "../media/jpg/p2.jpg"
+      },
+      {
+        "id": 3,
+        "projectName": "Social Media: Sparking Connections",
+        "projectDesc": "In the fast-paced world of digital presence, our Social Media Marketing service goes above and beyond what most people do. We deal with News Paper Advertisement, Radio advertisement, Theater advertisement, Read More...",
+        "projectImg": "../media/jpg/p3.jpg"
+      },
+      {
+        "id": 4,
+        "projectName": "Website Design and Development",
+        "projectDesc": "The digital landscape is our playground. For a client who wanted to change the way they looked online, we began the creative process of rebuilding. Their website went to a new level with a user-centered web design, interactive features, and an easy-to-use online trip. The numbers spoke volumes as the website got a 30% surge in online engagement, marked by a 20% rise in conversion rates and resounding positive user feedback.",
+        "projectImg": "../media/jpg/p4.jpg"
+      },
+      {
+        "id": 5,
+        "projectName": "Video Editing Design: Crafting Visual Narratives",
+        "projectDesc": "Our Video Editing Design service brings stories to life in this age of visual storytelling. Our video editors can tell your audience interesting stories through everything from promotional videos to interesting material for your websites. It's not just editing that we care about; it's also making visual experiences that last.",
+        "projectImg": "../media/jpg/p5.jpg"
+      },
+      {
+        "id": 6,
+        "projectName": "Outdoor Branding Mastery",
+        "projectDesc": "Experience the impact of our outdoor branding expertise. Elevate your brand with visually stunning designs that command attention in every open space. Explore our portfolio for a glimpse into the world where Read More...",
+        "projectImg": "../media/jpg/p6.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "serviceName": "Branding",
+    "serviceData": [
+      {
+        "id": 1,
+        "projectName": "Branding: Shaping Identities, Crafting Legacies",
+        "projectDesc": "The Branding service is at the heart of what we do, and this is where we give our best to a brand-new life for your web. You would not want to miss our services on Website Design, Website redesign, UI/UX design and Newsletter Design.<br /> To make a brand personality that connects with your audience, we learn a lot about your story, values, and goals. We build lasting brand legacies through everything from logo design to brand planning.",
+        "projectImg": "../media/jpg/p1.jpg"
+      },
+      {
+        "id": 2,
+        "projectName": "Packaging: Art Beyond Protection",
+        "projectDesc": "Packaging is more than just keeping something safe; it's also about having an experience. The Packaging service we offer is both useful and beautiful. We design packages that keep your goods safe and make them Read More...",
+        "projectImg": "../media/jpg/p2.jpg"
+      },
+      {
+        "id": 3,
+        "projectName": "Social Media: Sparking Connections",
+        "projectDesc": "In the fast-paced world of digital presence, our Social Media Marketing service goes above and beyond what most people do. We deal with News Paper Advertisement, Radio advertisement, Theater advertisement, Read More...",
+        "projectImg": "../media/jpg/p3.jpg"
+      },
+      {
+        "id": 4,
+        "projectName": "Website Design and Development",
+        "projectDesc": "The digital landscape is our playground. For a client who wanted to change the way they looked online, we began the creative process of rebuilding. Their website went to a new level with a user-centered web design, interactive features, and an easy-to-use online trip. The numbers spoke volumes as the website got a 30% surge in online engagement, marked by a 20% rise in conversion rates and resounding positive user feedback.",
+        "projectImg": "../media/jpg/p4.jpg"
+      },
+      {
+        "id": 5,
+        "projectName": "Video Editing Design: Crafting Visual Narratives",
+        "projectDesc": "Our Video Editing Design service brings stories to life in this age of visual storytelling. Our video editors can tell your audience interesting stories through everything from promotional videos to interesting material for your websites. It's not just editing that we care about; it's also making visual experiences that last.",
+        "projectImg": "../media/jpg/p5.jpg"
+      },
+      {
+        "id": 6,
+        "projectName": "Outdoor Branding Mastery",
+        "projectDesc": "Experience the impact of our outdoor branding expertise. Elevate your brand with visually stunning designs that command attention in every open space. Explore our portfolio for a glimpse into the world where Read More...",
+        "projectImg": "../media/jpg/p6.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "serviceName": "Web Design",
+    "serviceData": [
+      {
+        "id": 1,
+        "projectName": "Branding: Shaping Identities, Crafting Legacies",
+        "projectDesc": "The Branding service is at the heart of what we do, and this is where we give our best to a brand-new life for your web. You would not want to miss our services on Website Design, Website redesign, UI/UX design and Newsletter Design.<br /> To make a brand personality that connects with your audience, we learn a lot about your story, values, and goals. We build lasting brand legacies through everything from logo design to brand planning.",
+        "projectImg": "../media/jpg/p1.jpg"
+      },
+      {
+        "id": 2,
+        "projectName": "Packaging: Art Beyond Protection",
+        "projectDesc": "Packaging is more than just keeping something safe; it's also about having an experience. The Packaging service we offer is both useful and beautiful. We design packages that keep your goods safe and make them Read More...",
+        "projectImg": "../media/jpg/p2.jpg"
+      },
+      {
+        "id": 3,
+        "projectName": "Social Media: Sparking Connections",
+        "projectDesc": "In the fast-paced world of digital presence, our Social Media Marketing service goes above and beyond what most people do. We deal with News Paper Advertisement, Radio advertisement, Theater advertisement, Read More...",
+        "projectImg": "../media/jpg/p3.jpg"
+      },
+      {
+        "id": 4,
+        "projectName": "Website Design and Development",
+        "projectDesc": "The digital landscape is our playground. For a client who wanted to change the way they looked online, we began the creative process of rebuilding. Their website went to a new level with a user-centered web design, interactive features, and an easy-to-use online trip. The numbers spoke volumes as the website got a 30% surge in online engagement, marked by a 20% rise in conversion rates and resounding positive user feedback.",
+        "projectImg": "../media/jpg/p4.jpg"
+      },
+      {
+        "id": 5,
+        "projectName": "Video Editing Design: Crafting Visual Narratives",
+        "projectDesc": "Our Video Editing Design service brings stories to life in this age of visual storytelling. Our video editors can tell your audience interesting stories through everything from promotional videos to interesting material for your websites. It's not just editing that we care about; it's also making visual experiences that last.",
+        "projectImg": "../media/jpg/p5.jpg"
+      },
+      {
+        "id": 6,
+        "projectName": "Outdoor Branding Mastery",
+        "projectDesc": "Experience the impact of our outdoor branding expertise. Elevate your brand with visually stunning designs that command attention in every open space. Explore our portfolio for a glimpse into the world where Read More...",
+        "projectImg": "../media/jpg/p6.jpg"
+      }
+    ]
+  }
+]

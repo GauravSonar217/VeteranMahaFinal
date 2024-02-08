@@ -1,0 +1,84 @@
+.errorPage {
+  width: 100%;
+  @include flexrow;
+
+  .errorCont {
+    width: 55%;
+    height: 100%;
+    @include flexrow;
+    flex-direction: column;
+    @include largeDevice {
+      width: 60%;
+    }
+    @include mediumDevice {
+      width: 65%;
+    }
+    @include smallDevice {
+      width: 70%;
+    }
+    @include extraSmallDevice {
+      width: 85%;
+    }
+
+    h1 {
+      font-size: 4rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      @include smallDevice {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+      }
+      @include extraSmallDevice {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+      }
+      @include mobile {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+    p {
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      @include smallDevice {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+      }
+      @include extraSmallDevice {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+      }
+      @include mobile {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+      }
+    }
+    .goHomeBtn {
+      border: 2px solid $black;
+      background-color: #dcf2e7;
+      font-size: 1.2rem;
+      font-weight: 400;
+      padding: 0.8em 2em;
+      border-radius: 2rem;
+      @include mediumDevice {
+        font-size: 1.1rem;
+      }
+      @include smallDevice {
+        font-size: 1rem;
+      }
+      @include extraSmallDevice {
+        font-size: 1rem;
+      }
+      @include mobile {
+        font-size: 0.8rem;
+      }
+    }
+    .errorPic {
+      width: 40% !important;
+      // border: 1px solid red;
+      margin: 5rem auto;
+    }
+  }
+}

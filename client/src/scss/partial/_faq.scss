@@ -1,0 +1,252 @@
+// .accordion {
+//   display: grid;
+//   align-content: center;
+//   height: 100vh;
+// }
+
+// .accordion__container {
+//   display: grid;
+//   row-gap: .75rem;
+//   padding: 2rem 1rem;
+//   background-color: var(--container-color);
+//   border-radius: .5rem;
+//   box-shadow: 0 12px 32px rgba(51, 51, 51, 0.1);
+// }
+
+// .accordion__title {
+//   font-size: var(--small-font-size);
+//   color: var(--title-color);
+//   font-weight: 400;
+//   margin-top: .15rem;
+//   transition: .2s;
+// }
+
+// .accordion__header {
+//   display: flex;
+//   column-gap: .5rem;
+//   padding: 1.25rem 1.25rem 1.25rem 1rem;
+//   cursor: pointer;
+// }
+
+// .accordion__description {
+//   padding: 0 1.25rem 1.25rem 3rem;
+//   font-size: var(--smaller-font-size);
+// }
+
+// .accordion__icon {
+//   font-size: 1.5rem;
+//   height: max-content;
+//   color: var(--title-color);
+//   transition: .3s;
+// }
+
+// .accordion__item {
+//   box-shadow: 0 2px 6px rgba(38, 38, 38, 0.1);
+//   background-color: var(--container-color);
+//   border-radius: .25rem;
+//   position: relative;
+//   transition: all .25s ease;
+// }
+
+// .accordion__item::after {
+//   content: '';
+//   background-color: var(--first-color);
+//   width: 5px;
+//   height: 100%;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   border-radius: .25rem 0 0 .25rem;
+// }
+
+// .accordion__item:nth-child(1) {
+//   background-color: #fff7f0;
+// }
+
+// .accordion__item:nth-child(1)::after {
+//   background-color: #ffc08a;
+// }
+
+// .accordion__item:nth-child(2) {
+//   background-color: #f0f0ff;
+// }
+
+// .accordion__item:nth-child(2)::after {
+//   background-color: #8a8aff;
+// }
+
+// .accordion__item:nth-child(3) {
+//   background-color: #fff0f3;
+// }
+
+// .accordion__item:nth-child(3)::after {
+//   background-color: #ff8aa1;
+// }
+
+// .accordion__item:nth-child(4) {
+//   background-color: #f0faff;
+// }
+
+// .accordion__item:nth-child(4)::after {
+//   background-color: #8ad8ff;
+// }
+
+// .accordion__content {
+//   overflow: hidden;
+//   height: 0;
+//   transition: all .25s ease;
+// }
+
+// /*Rotate icon and add font weight to titles*/
+// .accordion-open .accordion__icon {
+//   transform: rotate(45deg);
+// }
+
+// .accordion-open .accordion__title {
+//   font-weight: 600;
+// }
+
+#faq {
+  width: 100%;
+  height: 100%;
+  #faqSection {
+    @include flexrow;
+    flex-direction: column;
+
+    h4 {
+      font-size: 1.25rem;
+      text-align: center;
+      color: #b0b0c0;
+    }
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      @include extraSmallDevice {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+    #faqCont {
+      .faq-card {
+        border: 1px solid #ccc;
+        margin-bottom: 1.5rem;
+        padding: 1rem 3.5rem;
+        border-radius: 40px;
+        border: 1px solid rgba(176, 176, 192, 0.3);
+        // @include largeDevice {
+        //   padding: 1.5rem 2rem;
+        // }
+        // @include mediumDevice {
+        //   padding: 1.5rem 2.5rem;
+        // }
+        // @include extraSmallDevice {
+        //   padding: 1rem !important;
+        // }
+
+        &.activeAns {
+          background-color: $black;
+
+          .question {
+            h3 {
+              color: $white;
+            }
+            .toggle {
+              background-color: $white;
+
+              .icon {
+                color: $black;
+              }
+            }
+          }
+          .answer {
+            display: block;
+            p {
+              color: $white;
+            }
+            a {
+              color: $white;
+              text-decoration: underline !important;
+            }
+          }
+        }
+
+        .question {
+          display: flex;
+          justify-content: space-between;
+          cursor: pointer;
+
+          h3 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            @include largeDevice {
+              font-size: 1.12rem;
+            }
+            @include mediumDevice {
+              font-size: 1.1rem;
+            }
+            @include smallDevice {
+              font-size: 1.1rem;
+            }
+            @include extraSmallDevice {
+              font-size: 1.1rem;
+            }
+          }
+          .toggle {
+            background-color: black;
+            // padding: 5px 10px;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            @include flexrow;
+
+            @include largeDevice {
+              width: 1.1rem;
+              height: 1.1rem;
+              padding: 0.9rem;
+            }
+            @include bigLaptop {
+              width: 1.1rem;
+              height: 1.1rem;
+              padding: 0.9rem;
+            }
+            @include smallDevice {
+              width: 1.1rem;
+              height: 1.1rem;
+              padding: 0.9rem;
+            }
+            @include extraSmallDevice {
+              width: 1.2rem;
+              height: 1.2rem;
+              padding: 0.9rem;
+            }
+
+            .icon {
+              font-size: 1.5rem;
+              color: white;
+
+              @include extraSmallDevice {
+                font-size: 1.1rem;
+              }
+            }
+          }
+        }
+        .answer {
+          display: none;
+          margin-top: 10px;
+          p {
+            font-size: 1.125rem;
+
+            a {
+              color: $white;
+              text-decoration: underline;
+            }
+          }
+          ul {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}

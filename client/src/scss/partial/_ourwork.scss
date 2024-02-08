@@ -1,0 +1,175 @@
+.ourWorkSec {
+  width: 100%;
+  position: relative;
+  background-image: linear-gradient( #ffffff, $light);
+  // border-radius: 123px;
+  // background: rgba(220, 242, 231, 0.8);
+  // filter: blur(250px);
+  //
+  #workSec {
+    height: 100%;
+
+    #ourWork {
+      width: 100%;
+
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 400;
+        line-height: 120%;
+        margin-bottom: 1.5rem;
+        @include mediumDevice {
+          font-size: 2.2rem;
+          // margin-bottom: 1rem;
+        }
+        @include smallDevice {
+          font-size: 2rem;
+          // margin-bottom: 1rem;
+          text-align: center;
+        }
+        @include extraSmallDevice {
+          font-size: 2.2rem;
+          text-align: center;
+        }
+        @include mobile {
+          font-size: 2rem;
+          margin-bottom: 1rem;
+          text-align: center;
+        }
+      }
+      #workBtn {
+        font-size: 1.1rem;
+        margin: 0 auto;
+        margin-top: 4rem;
+        padding: 1rem 2rem;
+        @include flexrow;
+        gap: 10px;
+        border-radius: 12px;
+        border: 1px solid rgba(32, 31, 41, 0.56);
+        background: #fff;
+        @include extraSmallDevice {
+          padding: 0.8rem 1.5rem;
+        }
+      }
+      .workCont {
+        width: 100%;
+        height: calc(100% - 50px);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 3rem 2rem;
+        @include largeDevice {
+          grid-gap: 2rem;
+        }
+        @include mediumDevice {
+          grid-gap: 2rem 1.5rem;
+        }
+        @include smallDevice {
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap: 1rem;
+        }
+        @include extraSmallDevice {
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap: 3rem;
+          padding: 0;
+        }
+
+        .workBox {
+          //   border: 1px solid red;
+          border-radius: 1.25rem;
+          @include smallDevice {
+            width: 80%;
+            margin: 0 auto;
+          }
+
+          .workImgBox {
+            position: relative;
+            overflow: hidden;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 1.25rem;
+            }
+            .mover {
+              width: 9.2rem;
+              height: 9.2rem;
+              border-radius: 50%;
+              background-color: #f1faf6;
+              position: absolute;
+              transform: translate(-50%, -50%);
+              transition: all linear 0.2s;
+              pointer-events: none;
+              @include flexrow;
+              font-size: 1.2rem;
+              z-index: 100;
+              cursor: pointer;
+              @include smallDevice {
+                width: 7.2rem;
+                height: 7.2rem;
+                font-size: 1rem;
+              }
+              @include extraSmallDevice {
+                width: 5.2rem;
+                height: 5.2rem;
+                font-size: 0.8rem;
+              }
+            }
+          }
+          .workTextBox {
+            @include flexrow;
+            justify-content: space-between;
+            // border: 1px solid blue;
+            padding-top: 1rem;
+            @include largeDevice {
+              flex-direction: column;
+              text-align: center;
+            }
+            @include mediumDevice {
+              flex-direction: column;
+              text-align: center;
+            }
+            @include smallDevice {
+              flex-direction: column;
+              text-align: center;
+              padding-top: 0.8rem;
+            }
+            @include extraSmallDevice {
+              flex-direction: column;
+              text-align: center;
+              padding-top: 0.8rem;
+            }
+            @include mobile {
+              flex-direction: column;
+              padding-top: 0.5rem;
+              text-align: center;
+            }
+            h3 {
+              font-size: 1.6rem;
+              @include mediumDevice {
+                font-size: 1.4rem;
+              }
+              @include extraSmallDevice {
+                font-size: 1.4rem;
+              }
+            }
+            h5 {
+              font-size: 1.25rem;
+              @include mediumDevice {
+                font-size: 1.1rem;
+              }
+              @include extraSmallDevice {
+                font-size: 1.1rem;
+              }
+              @include mobile {
+                font-size: 1rem;
+              }
+              a{
+                color: #b0b0c0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

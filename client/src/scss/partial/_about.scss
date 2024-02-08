@@ -1,0 +1,168 @@
+.aboutSec {
+  width: 100%;
+  height: 100%;
+  // background-color: $light;
+  background-image: linear-gradient($light, #ffffff);
+
+  #aboutSec {
+    width: 100%;
+    height: 100%;
+
+    #aboutInner {
+      width: 100%;
+      // height: 80vh;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 0 2rem;
+    
+      @include largeDevice {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 2rem 0;
+        .aboutImgCont {
+          order: 2;
+        }
+      }
+      @include mediumDevice {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem 0;
+        .aboutImgCont {
+          order: 2;
+        }
+      }
+      @include smallDevice {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem 0;
+        .aboutImgCont {
+          order: 2;
+        }
+      }
+      @include extraSmallDevice {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem 0;
+        .aboutImgCont {
+          order: 2;
+        }
+      }
+
+      .aboutImgCont {
+        border-radius: 1.25rem;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        @include largeDevice {
+          width: 80%;
+          margin: 0 auto;
+        }
+        @include mediumDevice {
+          width: 100%;
+          margin: 0 auto;
+        }
+        #cursor {
+          width: 9.2rem;
+          height: 9.2rem;
+          border-radius: 50%;
+          background-color: #f1faf6;
+          position: absolute;
+          transform: translate(-50%, -50%);
+          transition: all linear 0.2s;
+          pointer-events: none;
+          @include flexrow;
+          font-size: 1.2rem;
+          z-index: 100;
+          cursor: pointer;
+          @include extraSmallDevice{
+            display: none;
+          }
+
+          a {
+            color: #000;
+          }
+          @include smallDevice {
+            width: 7.2rem;
+            height: 7.2rem;
+            font-size: 1rem;
+          }
+          @include extraSmallDevice {
+            width: 5.2rem;
+            height: 5.2rem;
+            font-size: 0.8rem;
+          }
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 1.25rem;
+        }
+      }
+      .aboutTextCont {
+        padding: 2rem;
+        text-align: center;
+        @include extraLargeDevice {
+          text-align: left;
+        }
+        @include bigLaptop {
+          text-align: left;
+        }
+        @include mediumDevice {
+          padding: 1.5rem;
+        }
+        @include extraSmallDevice {
+          padding: 0rem;
+        }
+
+        h3 {
+          font-size: 1.5rem;
+          position: relative;
+          margin-bottom: 1rem;
+          @include extraLargeDevice {
+            margin-left: 3rem;
+            &::before {
+              content: "";
+              width: 7%;
+              border-bottom: 2px solid #000;
+              margin-right: 1.5rem;
+              position: absolute;
+              top: 50%;
+              left: -10%;
+            }
+          }
+          @include bigLaptop {
+            margin-left: 3rem;
+            &::before {
+              content: "";
+              width: 7%;
+              border-bottom: 2px solid #000;
+              margin-right: 1.5rem;
+              position: absolute;
+              top: 50%;
+              left: -10%;
+            }
+          }
+          @include extraSmallDevice{
+            font-size: 1.4rem;
+          }
+        }
+        h2 {
+          font-size: 2.5rem;
+          font-weight: 500;
+          margin-bottom: 1rem;
+          @include extraSmallDevice {
+            font-size: 2rem;
+          }
+        }
+        p {
+          font-size: 1.1rem;
+          font-weight: 400;
+          @include mediumDevice {
+            font-size: 1rem;
+          }
+          @include extraSmallDevice {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

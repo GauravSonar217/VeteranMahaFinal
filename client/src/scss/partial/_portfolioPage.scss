@@ -1,0 +1,452 @@
+.projectSec {
+  width: 100%;
+  height: 100%;
+  @include flexrow;
+  flex-direction: column;
+
+  .portHead {
+    width: 100%;
+    background: #dcf2e7;
+    padding: 7.5rem 0;
+    @include mediumDevice {
+      padding: 6rem 0;
+    }
+    @include extraSmallDevice {
+      padding: 4rem 0;
+    }
+
+    #projectCont {
+      width: 100%;
+      position: relative;
+      border-radius: 1.25rem;
+      @include flexrow;
+      justify-content: space-between;
+      
+      @include mediumDevice {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 4rem;
+      }
+      @include smallDevice {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 2rem;
+      }
+      @include extraSmallDevice {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem;
+      }
+      @include mobile {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem;
+        padding-bottom: 0rem;
+      }
+
+      .projectText {
+        @include flexrow;
+
+        @include largeDevice {
+          justify-content: start;
+        }
+        @include extraLargeDevice {
+          justify-content: start;
+        }
+        @include extraSmallDevice {
+          width: 100%;
+        }
+        h1 {
+          font-size: 4rem;
+          font-weight: 500;
+          text-align: left;
+          @include largeDevice {
+            font-size: 3.5rem;
+          }
+          @include mediumDevice {
+            font-size: 3rem;
+            text-align: center;
+          }
+          @include smallDevice {
+            font-size: 2.8rem;
+            text-align: center;
+          }
+          @include extraSmallDevice {
+            font-size: 2rem;
+            text-align: center;
+          }
+        }
+      }
+      .careerImg {
+        @include flexrow;
+        justify-content: end;
+
+        @include mediumDevice {
+          width: 60%;
+          margin: 0 auto;
+          justify-content: center;
+        }
+        @include smallDevice {
+          width: 70%;
+          margin: 0 auto;
+          justify-content: center;
+        }
+        @include extraSmallDevice {
+          width: 100%;
+          // height: 80%;
+          margin: 0 auto;
+          justify-content: center;
+        }
+        @include mobile {
+          width: 100%;
+          margin: 0 auto;
+          justify-content: center;
+        }
+        img {
+          width: 27.5rem;
+          height: 20rem;
+          border-radius: 1.25rem;
+
+          @include largeDevice{
+            width: 22rem;
+            height: 15rem;
+          }
+          @include bigLaptop{
+            width: 23rem;
+            height: 18rem;
+          }
+          @include mediumDevice {
+            height: 50%;
+          }
+          @include smallDevice {
+            height: 50%;
+          }
+          @include extraSmallDevice {
+            width: 70%;
+            height: 80%;
+          }
+          @include mobile {
+            height: 60%;
+          }
+
+        }
+      }
+    }
+  }
+  #textSec {
+    text-align: center;
+    p {
+      font-size: 1.125rem;
+      text-align: center;
+      margin: 3rem 0;
+      @include mediumDevice {
+        font-size: 1rem;
+      }
+      @include smallDevice {
+        font-size: 1rem;
+      }
+      @include extraSmallDevice {
+        font-size: 1rem;
+        margin-bottom: 0;
+      }
+      @include mobile {
+        font-size: 0.9rem;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.porfolioSec {
+  width: 100%;
+  height: 100%;
+  @include flexrow;
+  flex-direction: column;
+  // border: 1px solid red;
+
+  #portfolioCont {
+    width: 100%;
+    // height: 200vh;
+    height: 100%;
+    @include flexrow;
+    flex-direction: column;
+    // border: 1px solid blue;
+
+    h1 {
+      font-size: 4rem;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 2.5rem;
+      @include mediumDevice {
+        font-size: 3rem;
+      }
+      @include extraSmallDevice {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+      }
+    }
+    .projectbar {
+      padding: 0.8rem 1.125rem;
+      @include flexrow;
+      justify-content: space-between;
+      background-color: $black;
+      border-radius: 1.125rem;
+      margin-bottom: 3rem;
+      // border: 1px solid rgb(8, 249, 8);
+      @include extraLargeDevice {
+        width: 80%;
+      }
+      @include largeDevice {
+        width: 90%;
+      }
+      @include mediumDevice {
+        width: 90%;
+        padding: 0.5rem 1rem;
+      }
+      @include smallDevice {
+        width: 100%;
+        padding: 0.5rem 1rem;
+      }
+      @include extraSmallDevice {
+        flex-direction: column;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        margin-bottom: 2rem;
+      }
+      a {
+        padding: 0.9rem 1.45rem;
+        color: #626d78;
+        font-size: 1.125rem;
+        text-transform: uppercase;
+        border-radius: 0.5rem;
+        text-align: center;
+   
+
+        @include largeDevice {
+          padding: 0.9rem 1.2rem;
+        }
+        @include mediumDevice {
+          padding: 0.5rem 1rem;
+          font-size: 0.9rem;
+        }
+        @include mediumDevice {
+          padding: 0.5rem;
+          font-size: 0.9rem;
+        }
+        @include extraSmallDevice {
+          width: 100%;
+          padding: 0.5rem;
+          font-size: 0.9rem;
+          &:not(:last-child) {
+            margin-bottom: 0.5rem;
+          }
+        }
+
+        &.activeService {
+          background-color: $parrot;
+          color: $black;
+        }
+      }
+    }
+    .projectCont {
+      width: 100% !important;
+      height: 100%;
+      @include flexrow;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .projectRow {
+        width: 100%;
+
+        display: grid;
+        row-gap: 2rem;
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+        @include mediumDevice {
+          row-gap: 1rem !important;
+        }
+        &.row1 {
+          grid-template-columns: 65% 33%;
+          justify-content: space-between;
+          @include mediumDevice {
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 1rem;
+          }
+          @include extraSmallDevice {
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 1rem;
+          }
+        }
+        &.row2 {
+          grid-template-columns: 33% 65%;
+          justify-content: space-between;
+          @include mediumDevice {
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 1rem;
+          }
+          @include extraSmallDevice {
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 1rem;
+          }
+        }
+
+        .projectBox {
+          border-radius: 1.5rem;
+
+          .projectImgBox {
+            width: 100%;
+            height: 30rem;
+
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            border-top-right-radius: 1.5rem;
+            border-top-left-radius: 1.5rem;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-top-right-radius: 1.5rem;
+              border-top-left-radius: 1.5rem;
+            }
+            @include extraLargeDevice {
+              height: 28rem;
+            }
+            @include mediumDevice {
+              height: 20rem;
+            }
+            @include extraSmallDevice {
+              height: 15rem;
+            }
+            &.p1 {
+              background-image: url(../media/jpg/p1.jpg);
+            }
+            &.p2 {
+              background-image: url(../media/jpg/p2.jpg);
+            }
+            &.p3 {
+              background-image: url(../media/jpg/p3.jpg);
+            }
+            &.p4 {
+              background-image: url(../media/jpg/p4.jpg);
+            }
+            &.p5 {
+              background-image: url(../media/jpg/p5.jpg);
+            }
+            &.p6 {
+              background-image: url(../media/jpg/p6.jpg);
+            }
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          .projectTextBox {
+            width: 100%;
+            // padding: 1rem;
+            border-bottom-left-radius: 1.5rem;
+            border-bottom-right-radius: 1.5rem;
+            background-color: $dark;
+
+            h3 {
+              font-size: 1.6rem;
+              font-weight: 700;
+              text-align: left;
+              color: $white;
+              @include extraSmallDevice {
+                font-size: 1.3rem;
+              }
+            }
+            p {
+              font-size: 1rem;
+              font-weight: 400;
+              line-height: 1.3rem;
+              color: $white;
+              @include extraSmallDevice {
+                font-size: 0.9rem;
+              }
+            }
+            &.big {
+              padding: 1rem 1.5rem;
+              @include mediumDevice {
+                padding: 1rem;
+              }
+              @include extraSmallDevice {
+                padding: 1rem;
+              }
+            }
+            &.small {
+              padding: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.connectSec {
+  width: 100%;
+  height: 100%;
+
+  #connectSec {
+    width: 100%;
+    height: 100%;
+
+    #connectCont {
+      padding: 5rem 0;
+      background-color: $black;
+      color: $white;
+      @include flexrow;
+      flex-direction: column;
+      text-align: center;
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 500;
+        color: $white;
+        @include extraSmallDevice {
+          font-size: 2rem;
+        }
+        @include smallMobile {
+          font-size: 1.5rem;
+        }
+      }
+      p {
+        font-size: 1.25rem;
+        font-weight: 400;
+        margin: 1.5rem 0;
+        @include extraSmallDevice {
+          font-size: 1.1rem;
+          text-align: center;
+          margin: 1rem;
+        }
+        @include smallMobile {
+          font-size: 0.9rem;
+          text-align: center;
+          margin: 1rem;
+        }
+      }
+      #connectBtn {
+        display: flex;
+        padding: 1.2rem 3rem;
+        justify-content: center;
+        align-items: center;
+        background-color: $parrot;
+        border: 1px solid $parrot;
+        border-radius: 0.8rem;
+        margin-top: 1.5rem;
+        font-size: 1.125rem;
+        text-transform: uppercase;
+        @include mediumDevice {
+          padding: 1.2rem 2.5rem;
+        }
+        @include extraSmallDevice {
+          padding: 0.9rem 2rem;
+        }
+        @include smallMobile {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

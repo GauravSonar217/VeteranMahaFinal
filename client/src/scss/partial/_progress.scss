@@ -1,0 +1,168 @@
+.progressSec {
+  width: 100%;
+  position: relative;
+  background-color: $light;
+
+  #progressSec {
+    width: 100%;
+    @include flexrow;
+    flex-direction: column;
+    row-gap: 3rem;
+
+    #innerProgressSec {
+      // width: 100%;
+      text-align: center;
+
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        @include extraSmallDevice {
+          font-size: 1.3rem;
+          margin-bottom: 1rem;
+        }
+      }
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+        @include extraSmallDevice {
+          font-size: 2rem;
+          margin-bottom: 1rem;
+        }
+      }
+      p {
+        font-size: 1.1rem;
+        font-weight: 400;
+        @include extraSmallDevice{
+          font-size: 1rem;
+        }
+      }
+    }
+    .progressCont {
+      width: 100%;
+      @include flexrow;
+      align-items: start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      row-gap: 2rem;
+      @include extraSmallDevice{
+        row-gap: 1rem;
+      }
+     
+      @include extraLargeDevice {
+        flex-wrap: nowrap;
+      }
+
+      .progressBox {
+        width: 25%;
+        padding: 1rem 1.5rem;
+        text-align: center;
+        @include flexrow;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all ease-in 0.2s;
+        border-radius: 1.25rem;
+        &:hover{
+          background-color: $white;
+        }
+        @include mediumDevice {
+          width: 100%;
+        }
+        @include smallDevice {
+          width: 100%;
+        }
+        @include extraSmallDevice {
+          width: 100%;
+          padding: 1rem;
+        }
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+          @include largeDevice {
+            width: 32%;
+          }
+          @include bigLaptop {
+            width: 32%;
+          }
+        }
+
+        &:nth-child(4) {
+          @include largeDevice {
+            width: 49%;
+          }
+          @include bigLaptop {
+            width: 49%;
+          }
+        }
+        &:last-child {
+          @include largeDevice {
+            width: 49%;
+          }
+          @include bigLaptop {
+            width: 49%;
+          }
+        }
+
+        img {
+          width: 5rem;
+          height: 5rem;
+          margin-bottom: 1rem;
+          @include largeDevice {
+            width: 5.5rem;
+            height: 5.5rem;
+          }
+          @include mediumDevice {
+            width: 6rem;
+            height: 6rem;
+          }
+          @include extraSmallDevice {
+            width: 5rem;
+            height: 5rem;
+          }
+        }
+        h4 {
+          font-size: 1.12rem;
+          // font-weight: 500;
+          margin-bottom: 1rem;
+          @include largeDevice {
+            font-size: 1.8rem;
+          }
+          @include bigLaptop {
+            font-size: 1.8rem;
+          }
+          @include mediumDevice {
+            font-size: 2rem;
+          }
+          @include smallDevice {
+            font-size: 1.8rem;
+          }
+          @include extraSmallDevice {
+            font-size: 1.5rem;
+          }
+        }
+        p {
+          font-size: 1rem;
+          font-weight: 400;
+          @include largeDevice {
+            font-size: 1.1rem;
+          }
+          @include bigLaptop {
+            font-size: 1.1rem;
+          }
+          @include mediumDevice {
+            font-size: 1.1rem;
+          }
+          @include smallDevice {
+            font-size: 1.09rem;
+          }
+          @include extraSmallDevice {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

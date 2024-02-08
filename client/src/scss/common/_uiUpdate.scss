@@ -1,0 +1,69 @@
+nav{
+    .links a:hover{
+        background-color: $red-50;
+        @include transition();
+    }
+}
+
+.answer{
+    ul{
+        list-style: decimal !important;
+    }
+}
+
+
+// ********** Text fade In **********
+// Fadein on mouse scroll
+
+
+  /* Animations */
+  // p,
+  // li,
+  // a,
+  // h2,
+  // h3,
+  // h4,
+  // h5, 
+  // h6,
+  // b,
+  // address,
+  // li{
+  //   opacity: 0;
+
+  //   .col {
+  //     font-size: 14px;
+  //     width: 49%;
+  //     float: left;
+  //     margin-right: 2%;
+  //     margin-bottom: 10px;
+  //   }
+  // }
+
+  // .textFade {
+  //   -webkit-animation: slideInAnimation 0.6s ease 0.25s forwards;
+  //   animation: slideInAnimation 0.6s ease 0.25s forwards;
+  // }
+
+  // @-webkit-keyframes slideInAnimation {
+  //   0% {
+  //     -webkit-transform: translateY(50px);
+  //     opacity: 0;
+  //   }
+
+  //   100% {
+  //     -webkit-transform: translateY(0);
+  //     opacity: 1;
+  //   }
+  // }
+
+  // @keyframes slideInAnimation {
+  //   0% {
+  //     -webkit-transform: translateY(50px);
+  //     opacity: 0;
+  //   }
+
+  //   100% {
+  //     -webkit-transform: translateY(0);
+  //     opacity: 1;
+  //   }
+  // }

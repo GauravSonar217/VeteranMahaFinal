@@ -1,0 +1,223 @@
+.adminPanelSec {
+  width: 100%;
+  height: 100vh;
+  @include extraSmallDevice {
+    overflow: hidden;
+  }
+
+  .adminHeader {
+    width: 100%;
+    height: 160px;
+    @include extraSmallDevice {
+      height: 140px;
+    }
+
+    #adminHeaderSec {
+      width: 100%;
+      @include flexrow;
+      flex-direction: column;
+      justify-content: start;
+      padding: 1.5rem 0;
+      // border: 1px solid red;
+      @include extraSmallDevice {
+        padding: 1.5rem 0;
+      }
+
+      .adminNavbar {
+        width: 100%;
+        padding: 1rem;
+        @include flexrow;
+        justify-content: space-between;
+        // border: 1px solid blue;
+        @include extraSmallDevice {
+          padding: 0;
+          padding-top: 1.5rem;
+        }
+
+        p {
+          margin: 0;
+          font-size: 1.1rem;
+        }
+        .linkgrp {
+          @include flexrow;
+          p {
+            &:first-child {
+              font-weight: 400;
+            }
+            &:last-child {
+              margin: 0 1rem;
+              font-weight: 600;
+            }
+            a {
+              color: $black;
+            }
+          }
+        }
+        #logoutBtn {
+          background-color: $parrot;
+          border: 1px solid $parrot;
+          border-radius: 0.5rem;
+
+          a {
+            font-size: 1.3rem;
+            font-weight: 600;
+            padding: 1rem 2rem;
+            text-transform: uppercase;
+            color: $black;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+  .adminPanel {
+    width: 100%;
+    height: calc(100vh - 160px);
+    background: #efeded;
+    padding: 2rem 0;
+    // border: 1px solid blue;
+    @include extraSmallDevice {
+      padding: 1rem 0;
+    }
+
+    #adminPanelCont {
+      height: 100%;
+      @include flexrow;
+      flex-direction: column;
+      // justify-content: space-between;
+      row-gap: 2rem;
+      @include extraSmallDevice {
+        // display: none;
+        justify-content: space-between;
+      }
+
+      .dataBoxCont {
+        width: 100%;
+        @include flexrow;
+        column-gap: 4rem;
+        // border: 1px solid red;
+        @include mediumDevice {
+          column-gap: 0rem;
+          justify-content: space-between;
+        }
+        @include smallDevice {
+          column-gap: 0rem;
+          justify-content: space-between;
+        }
+        @include extraSmallDevice {
+          column-gap: 0rem;
+          flex-direction: column;
+          row-gap: 1rem;
+          justify-content: space-between;
+        }
+        .dataBox {
+          width: 22%;
+          padding: 1rem 1rem 1.5rem 1rem;
+          background-color: $white;
+          border-radius: 1.25rem;
+          @include flexrow;
+          flex-direction: column;
+          row-gap: 0.6rem;
+          @include largeDevice {
+            width: 25%;
+            padding: 1rem;
+          }
+          @include mediumDevice {
+            width: 30%;
+            padding: 1rem;
+          }
+          @include smallDevice {
+            width: 30%;
+            padding: 1rem;
+          }
+          @include extraSmallDevice {
+            width: 80%;
+            padding: 0.8rem 0;
+            flex-direction: row;
+          }
+          img {
+            width: 3rem;
+            height: 3rem;
+            @include mediumDevice {
+              width: 2rem;
+              height: 2rem;
+            }
+            @include extraSmallDevice {
+              width: 1.3rem;
+              height: 1.3rem;
+              margin: 0 0.5rem;
+            }
+          }
+          h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            @include mediumDevice {
+              font-size: 1.8rem;
+              font-weight: 500;
+            }
+            @include extraSmallDevice {
+              font-size: 1.3rem;
+              font-weight: 500;
+              margin: 0;
+            }
+          }
+        }
+      }
+      .userDetailsCont {
+        width: 100%;
+        height: 55vh;
+        border: 1px solid $black;
+        border-radius: 1.25rem;
+        background-color: $white;
+        overflow-y: scroll !important;
+
+        @include extraSmallDevice {
+          height: 52vh;
+        }
+        .dataTable {
+          width: 100%;
+
+          .tableHead {
+            position: sticky;
+            top: 0;
+            background-color: $white;
+          }
+
+          @include extraSmallDevice {
+            font-size: 0.8rem;
+          }
+
+          th,
+          td {
+            padding: 8px;
+            text-align: left;
+            padding-left: 1rem;
+            @include extraSmallDevice {
+              padding: 0.5rem;
+            }
+          }
+          th:not(:last-child),
+          td:not(:last-child) {
+            border-right: 1px solid #cecaca;
+          }
+          th {
+            padding-bottom: 2rem;
+          }
+          .deleteBtn {
+            padding: 0.5rem 1rem;
+            border-radius: 0.8rem;
+            border: 1px solid $black;
+            background-color: $white;
+
+            @include extraSmallDevice {
+              padding: 0.5rem;
+            }
+          }
+        }
+      }
+      .userDetailsCont::-webkit-scrollbar {
+        width: 0;
+      }
+    }
+  }
+}

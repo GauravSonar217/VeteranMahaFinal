@@ -1,0 +1,486 @@
+.wrapper {
+  width: 100%;
+  position: relative;
+
+  #followCont {
+    width: 20rem;
+    padding: 1.8rem;
+    position: absolute;
+    top: 5rem;
+    right: -400px;
+    background-color: $red-900;
+    @include flexrow;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.9rem 5rem;
+    z-index: 100;
+    transition: right 0.5s ease-in-out;
+    display: none;
+    @include largeDevice {
+      width: 12rem;
+      padding-top: 1.5rem;
+      padding-bottom: 1rem;
+    }
+
+    @include extraLargeDevice{
+      display: block;
+    }
+    @include bigLaptop{
+      display: block;
+    }
+    @include largeDevice{
+      display: block;
+    }
+
+    &.visible {
+      display: block;
+      right: 0px;
+    }
+
+    h2 {
+      color: #fff;
+      width: 100%;
+      font-size: 2rem;
+      @include flexrow;
+      justify-content: space-between;
+      @include largeDevice {
+        font-size: 1.3rem;
+      }
+
+      #close {
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+        @include largeDevice {
+          width: 1.6rem;
+          height: 1.6rem;
+        }
+      }
+    }
+    .socialIconBox {
+      width: 60%;
+      @include flexrow;
+      justify-content: space-between;
+      @include largeDevice {
+        width: 100%;
+      }
+      @include mediumDevice {
+        display: block;
+        position: absolute;
+      }
+
+      a {
+        padding: 0.5rem;
+        border-radius: 50%;
+        border: none;
+        @include largeDevice {
+          padding: 0.3rem;
+        }
+        img {
+          width: 1.2rem;
+          height: 1.2rem;
+          fill: black;
+          @include largeDevice {
+            width: 1rem;
+            height: 1rem;
+          }
+        }
+      }
+    }
+  }
+  nav {
+    width: 100%;
+    height: fit-content;
+    background-color: $white;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    padding: 0;
+    position: relative;
+
+    #navbar {
+      @include flexrow;
+      justify-content: space-between;
+
+      @include mediumDevice {
+        padding: 0.8rem 0;
+      }
+      @include smallDevice {
+        padding: 0.8rem 0;
+      }
+      @include extraSmallDevice {
+        padding: 0.8rem 0;
+      }
+
+      a {
+        color: $desc !important;
+        font-weight: 400 !important;
+
+        &:hover {
+          text-decoration: underline;
+          color: $black;
+        }
+      }
+      .menubar {
+        width: 2.5rem;
+        display: none;
+        cursor: pointer;
+        @include mediumDevice {
+          display: inline-block;
+        }
+        @include smallDevice {
+          display: inline-block;
+        }
+        @include extraSmallDevice {
+          display: inline-block;
+        }
+        img {
+          width: 80%;
+        }
+      }
+      .navbar-brand {
+        img {
+          width: 100%;
+        }
+        @include largeDevice {
+          width: 150px;
+        }
+        @include extraSmallDevice {
+          width: 130px;
+        }
+      }
+      .firstLinkCont {
+        @include flexrow;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+
+        @include mediumDevice {
+          position: absolute;
+          top: 5rem;
+          left: 0;
+          width: 100%;
+          height: calc(75vh - 90px);
+          flex-direction: column;
+          justify-content: start;
+          background-color: $white;
+          padding: 0 5rem;
+          display: none;
+        }
+        @include smallDevice {
+          position: absolute;
+          top: 5rem;
+          left: 0;
+          width: 100%;
+          height: calc(90vh - 90px);
+          flex-direction: column;
+          justify-content: start;
+          background-color: $white;
+          padding: 0 5rem;
+          display: none;
+        }
+        @include extraSmallDevice {
+          position: absolute;
+          top: 4.5rem;
+          left: 0;
+          width: 100%;
+          height: calc(100vh - 90px);
+          flex-direction: column;
+          justify-content: start;
+          background-color: $white;
+          padding: 0 3rem;
+          display: none;
+          // z-index: 1;
+        }
+        @include smallMobile{
+          height: calc(130vh - 90px);
+
+        }
+
+        .nav-item {
+          padding: 0.7rem 0;
+
+          @include mediumDevice {
+            width: 100%;
+            text-align: center;
+            padding-bottom: 0;
+            &:not(:last-child) {
+              border-bottom: 2px solid $black;
+            }
+            margin-bottom: 1rem;
+          }
+          @include smallDevice {
+            width: 100%;
+            text-align: center;
+            padding-bottom: 0;
+            &:not(:last-child) {
+              border-bottom: 2px solid $black;
+            }
+            margin-bottom: 1rem;
+          }
+          @include extraSmallDevice {
+            width: 100%;
+            text-align: center;
+            padding: 0;
+            &:not(:last-child) {
+              border-bottom: 2px solid $black;
+            }
+            margin-bottom: 1.5rem;
+          }
+
+          .nav-link {
+            font-weight: 600 !important;
+
+            padding: 1rem 1.5rem;
+            text-transform: uppercase;
+            @include largeDevice {
+              padding: 1rem;
+            }
+            @include mediumDevice {
+              font-size: 1.3rem;
+              // padding: 0;
+            }
+            @include smallDevice {
+              font-size: 1.2rem;
+            }
+          }
+        }
+        .serviceLink {
+          @include largeDevice {
+            &:hover {
+              .serviceDropdown {
+                display: block;
+              }
+            }
+          }
+
+          @include extraLargeDevice {
+            &:hover {
+              .serviceDropdown {
+                display: block;
+              }
+            }
+          }
+
+          .serviceDropdown {
+            width: 100vw;
+            height: calc(90vh - 80px);
+            @include flexrow;
+            background-color: $white;
+            position: absolute;
+            left: 0;
+            top: 4.5rem;
+            display: none;
+            animation: slideDown 0.8s forwards;
+            @include extraLargeDevice {
+              height: calc(100vh - 100px);
+            }
+            @include largeDevice {
+              height: calc(105vh - 100px);
+            }
+            @include extraLargeDevice {
+              height: calc(100vh - 100px);
+            }
+
+            .serviceCont {
+              width: 70%;
+              height: 100%;
+              margin: 0 auto;
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              grid-gap: 4rem;
+
+              @include largeDevice {
+                width: 80%;
+                grid-gap: 2rem;
+              }
+
+              .services {
+                position: relative;
+                @include flexrow;
+                align-items: start;
+                flex-direction: column;
+
+                &::after {
+                  content: "";
+                  width: 3px;
+                  height: 60%;
+                  position: absolute;
+                  top: 50%;
+                  right: 0;
+                  transform: translateY(-50%);
+                  border: 3px dashed $light;
+                }
+
+                h1 {
+                  font-weight: 400;
+                  a {
+                    font-size: 3.6rem;
+                    text-transform: capitalize;
+                    text-decoration: none;
+                    color: $black;
+                    position: relative;
+                    @include largeDevice {
+                      font-size: 3rem;
+                    }
+
+                    &:hover {
+                      &::after {
+                        content: "";
+                        width: 100%;
+                        height: 2px;
+                        background-color: $black;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                      }
+                    }
+                  }
+
+                  &:not(:last-child) {
+                    margin-bottom: 2rem;
+                  }
+                }
+              }
+              .subServices {
+                @include flexrow;
+
+                #subServeCont {
+                  width: 100%;
+                  display: grid;
+                  grid-template-columns: repeat(2, 1fr);
+                  padding: 0;
+
+                  li {
+                    a {
+                      width: 100%;
+                      font-size: 1.25rem;
+                      padding: 0.5rem;
+                      text-align: left;
+                      margin: 0;
+                      text-transform: capitalize;
+                      display: inline-block;
+                      color: $black;
+                    }
+
+                    &:not(:last-child) {
+                      margin-bottom: 0.5rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          @keyframes slideDown {
+            from {
+              transform: translateY(-100%);
+            }
+            to {
+              transform: translateY(0);
+            }
+          }
+        }
+      }
+      .secondLinkCont {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+
+        @include largeDevice {
+          justify-content: center;
+          padding-left: 0px !important;
+        }
+        @include mediumDevice {
+          position: absolute;
+          top: 55vh;
+          left: 0;
+          width: 100%;
+          padding: 0;
+          justify-content: center;
+          display: none;
+        }
+        @include smallDevice {
+          position: absolute;
+          top: 70vh;
+          left: 0;
+          width: 100%;
+          padding: 0;
+          justify-content: center;
+          display: none;
+        }
+        @include extraSmallDevice {
+          position: absolute;
+          top: 75vh;
+          left: 0;
+          width: 100%;
+          padding: 0;
+          justify-content: center;
+          display: none;
+          z-index: 1000;
+        }
+        @include smallMobile {
+          position: absolute;
+          top: 100vh;
+        }
+
+        .links {
+          margin: 0 0.5rem;
+
+          @include flexrow;
+          @include largeDevice {
+            margin: 2%;
+          }
+          @include extraSmallDevice {
+            margin: 2%;
+          }
+          @include mediumDevice {
+            margin: 0 2%;
+            &:last-child {
+              display: none;
+            }
+          }
+          @include smallDevice {
+            margin: 0 2%;
+            &:last-child {
+              display: none;
+            }
+          }
+          @include extraSmallDevice {
+            margin: 0 2%;
+            &:last-child {
+              display: none;
+            }
+          }
+
+          a {
+            @include flexrow;
+            border-radius: 50%;
+            padding: 1rem;
+
+            border: $border-1;
+            @include largeDevice {
+              padding: 0.6rem;
+            }
+            @include smallDevice {
+              padding: 0.8rem;
+            }
+            @include extraSmallDevice {
+              padding: 0.5rem;
+            }
+            img {
+              width: 100%;
+            }
+          }
+          &:last-child {
+            padding: 0.7rem 0;
+            &:hover {
+              #followCont {
+                visibility: visible;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+[
+    {
+      "id": 1,
+      "serviceName": "Graphic Design",
+      "subServices": ["Corporate identity", "Logo Design", "Social Media Design", "Illustrations", "Business Cards Design","Stationery Design", "Billboard Design", "Poster Design", "Flyers Design", "Catalog Design","Brochure Design", "Menu Design", "Label Design", "Package Design", "CD Cover Design","Book Cover Design", "Banner Design", "Vehicle Advertising", "Greeting card design", "Calendar design"]
+    },
+    {
+      "id": 2,
+      "serviceName": "Web Design",
+      "subServices": ["Website Design","Website Redesign","UI/UX Design","WordPress Design","eCommerce website","Portfolio website","Personal website","Event website","Nonprofit website","Startup website","Business website","Blog website","Informational website","School website","Booking website","Wedding website","Travel website","Landing page website","News and magazine website","Kid-friendly website"]
+    },
+    {
+      "id": 3,
+      "serviceName": "Printing",
+      "subServices": ["Inshop Branding"," Glow Sign Boards"," Bill Boards","ACP/ Acralyc Sinages","Product Display Boards","Custumise office stationary","Custumise wearables for Staff / consumers","Architecural custumise wall paper"]
+    },
+    {
+      "id": 4,
+      "serviceName": "Marketing",
+      "subServices": ["News Paper Advertisment","Radio advertisement","Theater advertisement","Digital Marketing","SEO, SMO Optimization","Google Adwords","Custom Merchandising","Events Production","Content Writing","Social media advertisement","Outdoor Campaign"]
+    },
+    {
+      "id": 5,
+      "serviceName": "Web Development",
+      "subServices": ["Website development","Front-End (UI) Development","Back-end Development","React JS Development","Wordpress Development","Web App Development","WordPress development","ECommerce development","Custom web apps","Newsletter Development"]
+    }
+  ]
+  
