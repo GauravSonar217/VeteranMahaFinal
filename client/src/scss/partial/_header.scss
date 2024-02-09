@@ -29,6 +29,8 @@ header {
     font-size: 6vw;
     font-weight: 600;
     line-height: 100%;
+    font-family: $DM-Text !important;
+
     @include extraSmallDevice {
       font-size: 8.5vw !important;
     }
@@ -58,6 +60,7 @@ header {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: $black;
     margin: 10px auto;
+
   }
 
   h1:last-child {

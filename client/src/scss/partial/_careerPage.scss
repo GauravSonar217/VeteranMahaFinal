@@ -166,13 +166,13 @@
         z-index: 100;
         border-radius: 0.8rem;
         box-shadow: 0px 4px 11.6px 0px #d3d3d3;
-        @include mediumDevice{
+        @include mediumDevice {
           width: 80%;
         }
-        @include smallDevice{
+        @include smallDevice {
           width: 80%;
         }
-        @include extraSmallDevice{
+        @include extraSmallDevice {
           width: 80%;
         }
         input {
@@ -238,15 +238,15 @@
         flex-wrap: wrap;
         row-gap: 1rem;
       }
-      @include smallDevice{
+      @include smallDevice {
         flex-wrap: wrap;
         row-gap: 1rem;
       }
-      @include extraSmallDevice{
+      @include extraSmallDevice {
         flex-wrap: wrap;
         row-gap: 1rem;
       }
-    
+
       .feedbackCont {
         width: 50%;
         position: relative;
@@ -254,13 +254,13 @@
         flex-direction: column;
         justify-content: center;
         row-gap: 1rem;
-        @include mediumDevice{
+        @include mediumDevice {
           width: 100%;
         }
-        @include smallDevice{
+        @include smallDevice {
           width: 100%;
         }
-        @include extraSmallDevice{
+        @include extraSmallDevice {
           width: 100%;
         }
       }
@@ -302,13 +302,27 @@
             grid-template-columns: repeat(1, 1fr);
             grid-gap: 1rem;
           }
+          input {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 12px;
+            border: 2px solid #e8e8e8;
+            outline: none;
+            font-size: 1rem;
+            &:focus {
+              border: 2px solid #b1df41;
+            }
+            @include extraSmallDevice {
+              padding: 0.8rem;
+            }
+          }
         }
-        input {
-          width: 100%;
+        label {
+          cursor: pointer !important;
+          display: inline-block !important;
           padding: 1rem;
           border-radius: 12px;
-          border: 2px solid #e8e8e8;
-          outline: none;
+          border: 2px solid #e8e8e8 !important;
           font-size: 1rem;
           &:focus {
             border: 2px solid #b1df41;
@@ -335,19 +349,18 @@
           width: 100%;
           @include flexrow;
           justify-content: space-between;
-          @include extraSmallDevice{
-            flex-wrap: wrap
+          @include extraSmallDevice {
+            flex-wrap: wrap;
           }
 
           .left {
             @include flexrow;
             justify-content: start;
-          
-            @include extraSmallDevice{
+
+            @include extraSmallDevice {
               width: 100%;
             }
             p {
-              
               margin: 0;
               margin-left: 1rem;
               @include extraSmallDevice {
@@ -358,7 +371,7 @@
               @include mobile {
                 font-size: 0.9rem;
                 margin-left: 1rem;
-                text-align:left ;
+                text-align: left;
               }
             }
           }

@@ -13,9 +13,11 @@ function Header() {
             }}
             initial={{ opacity: 0, scale: 0 }}
           >
-            <h1>Elevate Your Brand</h1>
-            <h1>With</h1>
-            <h1>Veteran Media Solution</h1>
+            <h1 style={{ fontFamily: "DM Serif Text, serif" }}>
+              Elevate Your Brand
+            </h1>
+            <h1 style={{ fontFamily: "DM Serif Text, serif" }}>With</h1>
+            <h1 style={{ fontFamily: "DM Serif Text, serif" }}>Veteran Media Solution</h1>
           </motion.div>
           <motion.p
             animate={{ opacity: 1, scale: 1 }}

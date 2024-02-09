@@ -6,7 +6,7 @@ const inquirySchema = new mongoose.Schema({
     phone: { type: String, required: true },
     message: {type: String, required: true},
     services: { type: String, required: true },
-    file: { type: String, required: false }
+    // file: { type: String, required: false }
 })
 
 const InquiryForm = new mongoose.model("inquiry-data", inquirySchema)

@@ -20,6 +20,8 @@ function CareerPage() {
     message: "",
     file: null,
   });
+
+  console.log(careerForm);
   const [showMessageBox, setShowMessageBox] = useState(false);
   const [showMessage, setShowMessage] = useState("");
   const [messageClass, setMessageClass] = useState("");
@@ -40,7 +42,7 @@ function CareerPage() {
 
   const careerSubmitHandler = async (e) => {
     e.preventDefault();
-  
+
     try {
       const formData = new FormData();
       formData.append("name", careerForm.name);
@@ -49,14 +51,18 @@ function CareerPage() {
       formData.append("vacancy", careerForm.vacancy);
       formData.append("message", careerForm.message);
       formData.append("file", careerForm.file);
-  
+
       console.log("Form Data:", Object.fromEntries(formData)); // Log the form data
-  
-      const response = await axios.post("http://localhost:4000/career", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+
+      const response = await axios.post(
+        "http://localhost:4000/career",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
 
       if (response.status === 201) {
         setShowMessageBox(true);
@@ -197,11 +203,19 @@ function CareerPage() {
                   placeholder="Job Vacancy*"
                 />
               </div>
+              <label
+                style={{ cursor: "pointer" }}
+                htmlFor="file"
+                className="fileInputLabel"
+              >
+                Upload CV/Portfolio
+              </label>
               <input
                 type="file"
                 name="file"
-                placeholder="Upload CV/ Portfolio*"
+                placeholder="Upload CV/ Portfolio"
                 id="file"
+                style={{ display: "none" }}
                 onChange={fileInputChangeHandler} // Use fileInputChangeHandler for file input
               />
               <textarea
@@ -233,6 +247,6 @@ function CareerPage() {
       <Footer></Footer>
     </React.Fragment>
   );
-};
+}
 
 export default CareerPage;

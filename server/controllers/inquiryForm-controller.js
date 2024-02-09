@@ -1,10 +1,13 @@
-const InquiryForm = require('../model/inquiryForm-model')
+
+const InquiryForm = require('../model/inquiryForm-model');
+const multer = require('multer');
+const path = require('path');
 
 const inquiry = async (req, res) => {
     try {
-        const { name, email, phone, services, message, file } = req.body
+        const { name, email, phone, services, message} = req.body
 
-        await InquiryForm.create({ name, email, phone, services, message, file })
+        await InquiryForm.create({ name, email, phone, services, message })
 
         res.status(201).json({ message: "message send successfully" })
     } catch (error) {

@@ -52,18 +52,9 @@ function Template() {
     phone: "",
     services: "",
     message: "",
-    file: "",
   });
 
-  let hideDivAfterDelay = () => {
-    setTimeout(() => {
-      setShowMessageBox(false);
-    }, 3000);
-
-    // return () => {
-    //   clearTimeout(hideTimeout);
-    // };
-  };
+console.log(inquiryForm);
 
   const handleInquiryInput = (e) => {
     const { name, value } = e.target;
@@ -90,7 +81,6 @@ function Template() {
           phone: "",
           services: "",
           message: "",
-          file: "",
         });
         hideDivAfterDelay();
       }
@@ -101,6 +91,13 @@ function Template() {
       setMessageClass("failed");
       hideDivAfterDelay();
     }
+  };
+
+
+  let hideDivAfterDelay = () => {
+    setTimeout(() => {
+      setShowMessageBox(false);
+    }, 3000);
   };
 
   let clientCounter, regularClient, projectDone, experience;
@@ -984,7 +981,7 @@ function Template() {
             </div>
 
             <div id="upload-container" className="uploadCont">
-              <label htmlFor="file-input" id="upload-label">
+              {/* <label htmlFor="file-input" id="upload-label">
                 <div id="upload-icon">
                   <img
                     src={upload}
@@ -1000,7 +997,7 @@ function Template() {
                 id="file-input"
                 accept=".pdf"
                 onChange={handleInquiryInput}
-              ></input>
+              ></input> */}
               <button type="submit" id="messageBtn" className="btn1">
                 Send Message
               </button>

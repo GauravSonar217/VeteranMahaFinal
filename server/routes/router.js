@@ -1,9 +1,10 @@
+
 const express = require('express')
 const router = express.Router()
 
-const {inquiry, getInquiryFormData, deleteInquiryData} = require('../controllers/inquiryForm-controller')
-const {career, getCareerFormData, deleteCareerData } = require('../controllers/careerForm-controller')
-const {contact, getContactFormData, deleteContactData} = require('../controllers/contactForm-controller')
+const { inquiry, getInquiryFormData, deleteInquiryData } = require('../controllers/inquiryForm-controller')
+const { career, getCareerFormData, deleteCareerData } = require('../controllers/careerForm-controller')
+const { contact, getContactFormData, deleteContactData } = require('../controllers/contactForm-controller')
 const login = require('../controllers/auth-controller')
 
 // routes

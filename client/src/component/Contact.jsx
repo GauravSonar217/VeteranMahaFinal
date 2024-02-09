@@ -210,8 +210,8 @@ function Contact() {
                   Address:
                 </h5>
                 <p>
-                  Office 1, Second Floor, Indira Heights, Gangapur Rd, Near
-                  Pramod Mahajan Garden, Old Gangapur Naka, Nashik,
+                  Office 1, Second Floor, Indira Heights, Gangapur Rd <br />
+                  Near Pramod Mahajan Garden, Old Gangapur Naka <br /> Nashik,
                   Maharashtra 422005
                 </p>
               </div>
