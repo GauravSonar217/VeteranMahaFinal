@@ -9,22 +9,23 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import axios from "axios";
 import MessageBox from "./MessageBox";
+import cross2 from "../media/svg/cross2.svg";
+import checkmark from "../media/svg/checkmark.svg";
 
 function CareerPage() {
   const [toggle, setToggle] = useState(false);
+  const [showMessageBox, setShowMessageBox] = useState(false);
+  const [showMessage, setShowMessage] = useState("");
+  const [messageClass, setMessageClass] = useState("");
   const [careerForm, setCareerForm] = useState({
     name: "",
     email: "",
     phone: "",
     vacancy: "",
     message: "",
-    file: null,
+    file: "",
   });
-
   console.log(careerForm);
-  const [showMessageBox, setShowMessageBox] = useState(false);
-  const [showMessage, setShowMessage] = useState("");
-  const [messageClass, setMessageClass] = useState("");
 
   const checkToggle = () => {
     setToggle(!toggle);
@@ -44,24 +45,9 @@ function CareerPage() {
     e.preventDefault();
 
     try {
-      const formData = new FormData();
-      formData.append("name", careerForm.name);
-      formData.append("email", careerForm.email);
-      formData.append("phone", careerForm.phone);
-      formData.append("vacancy", careerForm.vacancy);
-      formData.append("message", careerForm.message);
-      formData.append("file", careerForm.file);
-
-      console.log("Form Data:", Object.fromEntries(formData)); // Log the form data
-
       const response = await axios.post(
         "http://localhost:4000/career",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
+        careerForm
       );
 
       if (response.status === 201) {
@@ -74,21 +60,69 @@ function CareerPage() {
           phone: "",
           vacancy: "",
           message: "",
-          file: null,
+          file: "",
         });
-        setTimeout(() => {
-          setShowMessageBox(false);
-        }, 3000);
+        hideDivAfterDelay();
+        // alert(response.data.message);
       }
     } catch (error) {
       setShowMessageBox(true);
       setShowMessage(error.response.data.message);
       setMessageClass("failed");
-      setTimeout(() => {
-        setShowMessageBox(false);
-      }, 3000);
+      hideDivAfterDelay();
+      // alert(error.response.data.message);
     }
   };
+
+  // const careerSubmitHandler = async (e) => {
+  //   e.preventDefault();
+
+  //   try {
+  //     const formData = new FormData();
+  //     formData.append("name", careerForm.name);
+  //     formData.append("email", careerForm.email);
+  //     formData.append("phone", careerForm.phone);
+  //     formData.append("vacancy", careerForm.vacancy);
+  //     formData.append("message", careerForm.message);
+  //     formData.append("file", careerForm.file);
+
+  //     console.log("Form Data:", Object.fromEntries(formData)); // Log the form data
+
+  //     const response = await axios.post(
+  //       "http://localhost:4000/career",
+  //       formData,
+  //       {
+  //         headers: {
+  //           "Content-Type": "multipart/form-data",
+  //         },
+  //       }
+  //     );
+
+  //     if (response.status === 201) {
+  //       setShowMessageBox(true);
+  //       setShowMessage(response.data.message);
+  //       setMessageClass("success");
+  //       setCareerForm({
+  //         name: "",
+  //         email: "",
+  //         phone: "",
+  //         vacancy: "",
+  //         message: "",
+  //         file: null,
+  //       });
+  //       setTimeout(() => {
+  //         setShowMessageBox(false);
+  //       }, 3000);
+  //     }
+  //   } catch (error) {
+  //     setShowMessageBox(true);
+  //     setShowMessage(error.response.data.message);
+  //     setMessageClass("failed");
+  //     setTimeout(() => {
+  //       setShowMessageBox(false);
+  //     }, 3000);
+  //   }
+  // };
 
   return (
     <React.Fragment>
@@ -204,7 +238,13 @@ function CareerPage() {
                 />
               </div>
               <label
-                style={{ cursor: "pointer" }}
+                style={{
+                  cursor: "pointer",
+                  display: "inline-block",
+                  padding: "1rem",
+                  borderRadius: "12px",
+                  border: "2px solid #e8e8e8",
+                }}
                 htmlFor="file"
                 className="fileInputLabel"
               >
@@ -228,6 +268,7 @@ function CareerPage() {
                 onChange={careerInputHandler}
               ></textarea>
               <div className="formfooter">
+               
                 <div className="left">
                   <div className="checker" onClick={checkToggle}>
                     <div className="slider-button">x</div>
